@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 16, 2014 9:45:45 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="edu.neu.bookmanager.domain.Tweet" table="TWEET">
+        <id name="tweetId" type="java.lang.Integer">
+            <column name="TWEETID" />
+            <generator class="increment" />
+        </id>
+        <property name="content" type="java.lang.String">
+            <column name="CONTENT" />
+        </property>
+      <property name="coverPhoto" type="binary">
+           <column name="coverPHOTO"></column>
+      </property>
+       
+    </class>
+</hibernate-mapping>

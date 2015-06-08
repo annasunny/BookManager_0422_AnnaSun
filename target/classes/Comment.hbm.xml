@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 21, 2014 9:02:59 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="edu.neu.bookmanager.domain.Comment" table="COMMENT">
+        <id name="commentId" type="java.lang.Integer">
+            <column name="COMMENTID" />
+            <generator class="increment" />
+        </id>
+        <property name="content" type="java.lang.String">
+            <column name="CONTENT" />
+        </property>
+        <property name="byUser" type="java.lang.String">
+            <column name="BYUSER" />
+        </property>
+        
+        <property name="grade" type="int">
+            <column name="GRADE" />
+        </property>
+       
+    </class>
+</hibernate-mapping>

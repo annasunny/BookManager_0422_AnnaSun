@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+ <!--        <property name="hibernate.hbm2ddl.auto">create</property> -->
+   <!-- 更改数据库 -->
+    <property name="hibernate.hbm2ddl.auto">update</property> 
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+ 
+<!--         <mapping class="edu.neu.bookmanager.domain.Book"/>
+        <mapping class="edu.neu.bookmanager.domain.Tweet"/>
+        <mapping class="edu.neu.bookmanager.domain.User"/>
+        <mapping class="edu.neu.bookmanager.domain.Comment"/>  -->
+        
+        <mapping resource = "Book.hbm.xml"></mapping>
+        <mapping resource = "Comment.hbm.xml"></mapping>
+         <mapping resource = "Tweet.hbm.xml"></mapping>
+         <mapping resource = "User.hbm.xml"></mapping>  
+        
+        
+        
+    </session-factory>
+</hibernate-configuration>

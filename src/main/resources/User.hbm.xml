@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 16, 2014 9:45:45 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="edu.neu.bookmanager.domain.User" table="USER">
+        <id name="userId" type="java.lang.Integer">
+            <column name="USERID" />
+            <generator class="increment" />
+        </id>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <set name="tweets" table="TWEET" inverse="false" lazy="true">
+            <key>
+                <column name="USERID" />
+            </key>
+            <one-to-many class="edu.neu.bookmanager.domain.Tweet" />
+        </set>
+        <set name="comments" table="COMMENT" inverse="false" lazy="true">
+            <key>
+                <column name="USERID" />
+            </key>
+            <one-to-many class="edu.neu.bookmanager.domain.Comment" />
+        </set>
+        <property name="userDetail" type="java.lang.String">
+            <column name="USERDETAIL" />
+        </property>
+       <property name="coverPhoto" type="binary">
+           <column name="coverPHOTO"></column>
+       </property>
+        
+    </class>
+</hibernate-mapping>
