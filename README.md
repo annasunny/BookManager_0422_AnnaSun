@@ -1,4 +1,4 @@
-# BookManager_0422_AnnaSun
+# My_Book_Manager
 
 My Book Manager (J2EE, JavaScript, Spring, Hibernate)										        03/2014 - 05/2014
 •	Designed and developed a web application using J2EE, Spring MVC, Hibernate, and MySQL to help readers manage their reading lists, find interesting books and share book reviews.
